@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en" class="h-100">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.84.0">
+    <title>Anyline Scheduler Web</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/sticky-footer/">
+
+    
+
+    <!-- Bootstrap core CSS -->
+    <link href="dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="dist/css/app.css" rel="stylesheet">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+
+    <link href="sticky-footer.css" rel="stylesheet">
+  </head>
+  <body class="d-flex flex-column h-100">
+
+    <main class="flex-shrink-0">
+      <div class="container">
+        <h1 class="mt-5">Scheduler Web</h1>
+        <p class="lead">Example use for Lightning out</p>
+      </div>
+    </main>
+
+    <footer class="footer mt-auto py-3 bg-light">
+      <div class="container">
+        <span class="text-muted">Anyline</span>
+      </div>
+    </footer>
+    <script>
+      $Lightning.use("runtime_appointmentbooking:lightningOutGuest",
+      function() { // Callback once framework and app load
+      $Lightning.createComponent(
+        "lightning:flow", // top-level component of your app
+        { }, // attributes to set on the component when created
+        "lexcontainer", // the DOM location to insert the component
+        function(component) { // API name of the Flow
+        component.startFlow("Guest_Schedule_a_meeting");
+        }
+        );
+        }, "https://anyline--scheduler.sandbox.my.site.com/schedulerweb" // Site endpoint
+        );
+      </script>
+  </body>
+</html>
