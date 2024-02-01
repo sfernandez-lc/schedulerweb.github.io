@@ -58,8 +58,8 @@
         {}, // attributes to set on the component when created
         "lexcontainer", // the DOM location to insert the component
         function(component) { // API name of the Flow
-          let inputVariables = [{name: "ServiceTerritoryName",type: "String", value: "EMEA" }];
-        component.startFlow("Guest_Schedule_a_meeting",inputVariables);
+          //let inputVariables = [{name: "ServiceTerritoryName",type: "String", value: "EMEA" }];
+        component.startFlow("Guest_Schedule_a_meeting");
         }
         );
         }, "https://anyline--scheduler.sandbox.my.site.com/schedulerweb" // Site endpoint
