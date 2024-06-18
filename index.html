@@ -6,10 +6,10 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.84.0">
-    <title>Anyline Scheduler Web</title>
+    <title>Druni</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/sticky-footer/">
-    <script src="https://anyline--scheduler.sandbox.my.site.com/schedulerweb/lightning/lightning.out.js"></script>
+    <script src="https://druni--int.sandbox.my.salesforce-sites.com/lightning/lightning.out.js"></script>
     
 
     <!-- Bootstrap core CSS -->
@@ -53,7 +53,7 @@
   </head>
   <body class="d-flex flex-column h-100 fixed-top">
     <header class="header">
-      <img class="py-4" src="https://ocr.anyline.com/hubfs/raw_assets/public/Anyline_October2021/images/anyline-logo.afbc8da.svg" alt="Logo">
+      <img class="py-4" src="https://www.druni.es/media/wysiwyg/logoStore/logo.svg" alt="Logo">
       <!-- Puedes agregar aquí cualquier otro contenido del encabezado si es necesario -->
     </header>
     <main class="flex-shrink-0">
@@ -65,7 +65,7 @@
 
     <footer class="footer mt-auto py-3">
       <div class="container">
-        <span class="text-muted">Anyline</span>
+        <span class="text-muted">Druni</span>
       </div>
     </footer>
     <script>
@@ -77,12 +77,12 @@
         {}, // attributes to set on the component when created
         "lexcontainer", // the DOM location to insert the component
         function(component) { // API name of the Flow
-          let timeZone = -(new Date().getTimezoneOffset() / 60);
-          let inputVariables = [{name: "timeZoneOffset",type: "Number", value: timeZone }];
-          component.startFlow("Guest_Schedule_a_meeting",inputVariables);
+          
+          let inputVariables = [{name: "Var_MotivoCaso",type: "String", value: "" }];
+          component.startFlow("Case_Screen_CasoFormularioWeb",inputVariables);
         }
         );
-        }, "https://anyline--scheduler.sandbox.my.site.com/schedulerweb" // Site endpoint
+        }, "https://druni--int.sandbox.my.salesforce-sites.com/casoWeb" // Site endpoint
         );
       </script>
   </body>
